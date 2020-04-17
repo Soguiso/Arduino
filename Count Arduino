@@ -1,3 +1,5 @@
+//this is a arduino code for one seven segment display to count to 0 until 10
+
 int a = 8;
 int b = 9;
 int c = 3;
@@ -7,6 +9,16 @@ int f = 7;
 int g = 6;
 int dp = 2;
 
+void zero(){
+  digitalWrite(a, HIGH);
+  digitalWrite(b, HIGH);
+  digitalWrite(c, HIGH);
+  digitalWrite(d, HIGH);
+  digitalWrite(e, HIGH);
+  digitalWrite(f, HIGH);
+  digitalWrite(g, LOW);
+  digitalWrite(dp, LOW);
+}
 
 void one(){
   digitalWrite(a, LOW);
@@ -132,6 +144,8 @@ void ten(){
 
 void loop()
 {
+  zero();
+  delay(1000);
   one();
   delay(1000);
   two();
